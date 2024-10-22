@@ -91,7 +91,6 @@
         .home h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            text-align: center;
         }
 
         .home p {
@@ -99,7 +98,7 @@
             line-height: 1.6;
         }
 
-        .home img {
+        img {
             max-width: 100%;
             height: auto;
             border-radius: 10px;
@@ -116,6 +115,10 @@
         }
 
         @media (max-width: 768px) {
+            nav {
+                flex-direction: row;
+            }
+
             .nav-links {
                 display: none;
                 flex-direction: column;
@@ -146,20 +149,12 @@
                 transform: rotate(45deg) translate(-5px, -6px);
             }
 
-            .container {
-                padding: 0 1rem;
-            }
-
             .home h1 {
                 font-size: 2rem;
             }
 
             .home p {
                 font-size: 1rem;
-            }
-
-            .content {
-                padding: 1.5rem;
             }
         }
 
@@ -172,12 +167,23 @@
                 font-size: 0.9rem;
             }
 
-            .content {
-                padding: 1rem;
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
             }
 
-            .burger div {
-                width: 20px;
+            .burger {
+                margin-left: auto;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                align-items: flex-start;
+                padding-left: 1rem;
+            }
+
+            .container {
+                padding: 0 0.5rem;
             }
         }
     </style>
@@ -202,10 +208,11 @@
             </div>
         </nav>
     </header>
+
     <main>
         <section class="home">
             <div class="container">
-                <h1>Selamat Datang di Pelajaran Peluang Kelas 8</h1>
+                <h1 style="text-align: center;">Selamat Datang di Pelajaran Peluang Kelas 8</h1>
                 <div class="content">
                     <p>Selamat datang di halaman Materi Peluang Kelas 8. Kami sangat senang bisa menemani Anda dalam perjalanan pembelajaran matematika yang seru dan penuh tantangan ini. Peluang adalah salah satu konsep penting yang akan membantu Anda memahami bagaimana kejadian-kejadian di sekitar kita dapat dihitung dan diprediksi berdasarkan kemungkinan.</p>
                     <p>Dalam materi ini, Anda akan mempelajari berbagai konsep dasar tentang peluang, mulai dari teori hingga penerapannya dalam kehidupan sehari-hari. Kami telah menyusun materi ini dengan jelas dan mudah dipahami, sehingga Anda dapat memaksimalkan pemahaman dan keterampilan Anda. Tidak hanya itu, kami juga menyediakan contoh soal, latihan, dan video pembelajaran yang interaktif untuk membantu Anda lebih mendalami materi.</p>
@@ -217,9 +224,11 @@
             </div>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2024 Materi Peluang Kelas 8. Hartati Rintan.</p>
     </footer>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const burger = document.querySelector('.burger');
